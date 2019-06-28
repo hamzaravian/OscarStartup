@@ -43,7 +43,9 @@ INSTALLED_APPS = [
 
 
     'widget_tweaks',
-] + get_core_apps()
+
+
+] + get_core_apps(['apps', 'apps.catalogue'])
 
 SITE_ID = 1
 MIDDLEWARE = [
@@ -138,7 +140,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates/oscar'),
             OSCAR_MAIN_TEMPLATE_DIR
         ],
         'APP_DIRS': True,
